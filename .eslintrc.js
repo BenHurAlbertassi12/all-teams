@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'import'],
   extends: [
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
@@ -11,6 +11,12 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
     // Aqui você pode adicionar ou substituir regras personalizadas
   },
 };
