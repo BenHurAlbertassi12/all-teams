@@ -1,10 +1,12 @@
-import './App.css';
+import React from 'react';
+import LoginPage from '../src/page/login/LoginPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+      <div>
+        <LoginPage />
+      </div>
   );
-}
+};
 
 export default App;
