@@ -24,6 +24,7 @@
     "src",
     "**/*.ts",
     "**/*.tsx",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "setupProxy.js"
   ]
 }

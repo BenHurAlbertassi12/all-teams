@@ -10,6 +10,9 @@
     "@types/node": "^16.18.30",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "axios": "^1.4.0",
+    "follow-redirects": "^1.15.2",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --project tsconfig.server.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -26,6 +29,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "setupProxy.js"
+        ],
+        "parserOptions": {
+          "project": "./tsconfig.server.json"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -41,7 +54,8 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@types/follow-redirects": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
