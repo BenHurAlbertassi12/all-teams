@@ -1,11 +1,11 @@
 import React from 'react';
-import LoginPage from '../src/page/login/LoginPage';
+import LoginPage from './page/login/LoginPage';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-      <div>
-        <LoginPage />
-      </div>
+    <div>
+      <LoginPage />
+    </div>
   );
 };
 
